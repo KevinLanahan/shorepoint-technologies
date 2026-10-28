@@ -1,4 +1,12 @@
-export const projectTypes = ["Custom web application", "Mobile application", "AI & automation", "Systems integration", "Something else / Not sure yet"] as const;
+export const projectTypes = [
+  "Website redesign / modernization",
+  "New business website",
+  "Custom web application",
+  "Mobile application",
+  "AI & automation",
+  "Systems integration",
+  "Other",
+] as const;
 export const inquiryLimits = { name: 100, business: 150, email: 254, projectType: 80, description: 5000 } as const;
 export interface ProjectInquiry { name: string; business: string; email: string; projectType: string; description: string }
 export type InquiryErrors = Partial<Record<keyof ProjectInquiry, string>>;

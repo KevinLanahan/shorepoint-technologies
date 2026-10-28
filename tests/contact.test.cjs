@@ -98,3 +98,29 @@ test('missing configuration fails without calling provider', async () => {
 test('production does not trust arbitrary forwarding headers outside Vercel', async () => {
   const h = harness({ env: { VERCEL: '' } }); assert.equal((await h.route.POST(request())).status, 503); assert.equal(h.sends.length, 0);
 });
+
+const expectedProjectTypes = [
+  'Website redesign / modernization',
+  'New business website',
+  'Custom web application',
+  'Mobile application',
+  'AI & automation',
+  'Systems integration',
+  'Other',
+];
+test('shared form and API project types match the seven supported options in order', () => {
+  const h = harness();
+  const { projectTypes } = h.load('src/lib/inquiry.ts');
+  assert.deepEqual(Array.from(projectTypes), expectedProjectTypes);
+});
+test('every supported project type reaches the email body unchanged', async () => {
+  for (const projectType of expectedProjectTypes) {
+    const h = harness();
+    const response = await h.route.POST(request({ ...valid, projectType }));
+    assert.equal(response.status, 200, projectType);
+    assert.equal(h.sends.length, 1);
+    const [email] = h.sends[0];
+    assert.ok(email.text.includes(projectType), projectType);
+    assert.ok(email.html.includes(projectType.replaceAll('&', '&amp;')), projectType);
+  }
+});
