@@ -1,0 +1,3 @@
+import { ArrowDownRight, MapPin } from "lucide-react";
+import { InquiryForm } from "./inquiry-form";
+export function Contact() { return <section className="section contact-section" id="contact" aria-labelledby="contact-title"><div className="container contact-grid"><div className="contact-copy"><p className="eyebrow">04 / THE NEXT CHAPTER</p><h2 id="contact-title">Let’s build<br/><span>something.</span></h2><p>A new idea. A better workflow. A system that finally fits. It starts with a conversation.</p><div className="contact-rule"/><span className="contact-location"><MapPin size={17}/> Southern New Jersey & beyond</span><ArrowDownRight className="contact-arrow" size={70} strokeWidth={0.8}/></div><InquiryForm/></div></section>; }

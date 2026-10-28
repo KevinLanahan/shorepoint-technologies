@@ -1,0 +1,3 @@
+import { ArrowUpRight } from "lucide-react";
+import { Brand } from "./brand";
+export function Footer() { return <footer className="container footer"><div className="footer-top"><div><Brand/><p>Thoughtful software.<br/>Built around your business.</p></div><div className="footer-links"><span>EXPLORE</span><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a></div><div className="footer-links"><span>LET’S CONNECT</span><a href="#contact">Start a conversation <ArrowUpRight size={14}/></a><p>Southern New Jersey</p></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Shorepoint Technologies. All rights reserved.</span><span>Independent by design. Coastal by nature.</span></div></footer>; }
