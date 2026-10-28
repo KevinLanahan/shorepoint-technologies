@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": "22.x"
   },
   "dependencies": {
     "next": "16.2.10",
