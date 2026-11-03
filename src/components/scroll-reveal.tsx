@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export function ScrollReveal() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
-    const elements = document.querySelectorAll(".section-heading, .services-intro, .about-heading, .service-card, .project-card, .about-copy, .about-art, .contact-copy, .inquiry-shell");
+    const elements = document.querySelectorAll(".section-heading, .service-card, .project-card, .about-copy, .principle-card, .contact-copy, .inquiry-shell");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

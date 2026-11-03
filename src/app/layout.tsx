@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -23,5 +23,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}><body><a className="skip-link" href="#main">Skip to content</a>{children}</body></html>;
+  return <html lang="en" className={`${jakarta.variable} ${spaceGrotesk.variable}`}><body><a className="skip-link" href="#main">Skip to content</a>{children}</body></html>;
 }
