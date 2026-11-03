@@ -5,4 +5,6 @@ import { Work } from "@/components/work";
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
-export default function Home() { return <><Navigation/><main id="main"><Hero/><Services/><Work/><About/><Contact/></main><Footer/></>; }
+import { Marquee } from "@/components/marquee";
+import { ScrollReveal } from "@/components/scroll-reveal";
+export default function Home() { return <><Navigation/><main id="main"><Hero/><Marquee/><Services/><Work/><About/><Contact/></main><Footer/><ScrollReveal/></>; }

@@ -1,2 +1,15 @@
 import { ArrowUpRight, Check, MapPin } from "lucide-react";
-export function About() { return <section className="section container about-grid" id="about" aria-labelledby="about-title"><div className="about-art" aria-hidden="true"><div className="coast-grid"/><svg viewBox="0 0 440 360" fill="none"><path d="m260-20-12 68-35 40 9 51-26 45 8 36-35 42-13 118M285-20l-10 76-35 40 7 48-23 44 7 38-34 47-14 107M310-20l-10 83-33 42 5 43-20 44 7 40-33 49-15 99M335-20l-10 90-32 44 3 39-18 44 8 42-33 49-15 92M360-20l-9 97-32 45 1 36-15 44 8 43-32 51-15 84M385-20l-9 104-32 47-1 32-12 44 7 46-31 53-15 76"/><circle cx="225" cy="181" r="26"/><circle className="map-point" cx="225" cy="181" r="5"/></svg><div className="map-label"><MapPin size={15}/><span>SOUTHERN NEW JERSEY</span></div></div><div className="about-copy"><h2 id="about-title">About Shorepoint</h2><p>Shorepoint Technologies is an independent web design and software development studio in Southern New Jersey.</p><p>We work with small and medium-sized businesses on their websites, customer applications, and internal tools. We start by understanding your existing processes and what you need to improve.</p><ul>{["Engineering-led design and development", "Direct communication with your developer", "Software tailored to your business processes", "Local collaboration and ongoing support"].map(item=><li key={item}><Check size={16}/>{item}</li>)}</ul><a className="text-link" href="#contact">Discuss your project <ArrowUpRight size={16}/></a></div></section>; }
+export function About() {
+  return (
+    <section className="section container about-layout" id="about" aria-labelledby="about-title">
+      <div className="about-heading"><p className="eyebrow">ABOUT</p><h2 id="about-title">A local software<br /><span>partner.</span></h2></div>
+      <div className="about-copy">
+        <p>Shorepoint Technologies is an independent web design and software development studio in Southern New Jersey.</p>
+        <p>We work with small and medium-sized businesses on their websites, customer applications, and internal tools. We start by understanding your existing processes and what you need to improve.</p>
+        <ul>{["Engineering-led design and development", "Direct communication with your developer", "Software tailored to your business processes", "Local collaboration and ongoing support"].map(item => <li key={item}><Check size={15} />{item}</li>)}</ul>
+        <p className="service-area">Serving Manahawkin, Stafford Township, Long Beach Island, and surrounding areas.</p>
+        <div className="about-links"><span><MapPin size={15} /> Southern New Jersey</span><a className="text-link" href="#contact">Discuss your project <ArrowUpRight size={16} /></a></div>
+      </div>
+    </section>
+  );
+}

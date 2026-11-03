@@ -1,4 +1,39 @@
-import { ArrowDown, ArrowUpRight, Braces, Database, Layers3, Workflow } from "lucide-react";
+import { ArrowUpRight, Braces, Workflow } from "lucide-react";
+
+function StudioVisual() {
+  return (
+    <div className="studio-visual" role="img" aria-label="Illustration of a laptop with a sculptural purple display, representing custom software development">
+      <div className="studio-halo" />
+      <div className="laptop">
+        <div className="laptop-screen">
+          <div className="screen-sculpture sculpture-one" />
+          <div className="screen-sculpture sculpture-two" />
+          <div className="screen-caption"><Braces size={14} /><span>Designed around your business</span></div>
+        </div>
+        <div className="laptop-base"><span /></div>
+      </div>
+      <div className="studio-plinth" />
+      <span className="visual-signature"><Workflow size={13} /> WEBSITES / APPLICATIONS / AUTOMATION</span>
+    </div>
+  );
+}
+
 export function Hero() {
-  return <section id="home" className="hero" aria-labelledby="hero-title"><div className="container hero-grid"><div className="hero-copy"><h1 id="hero-title">Software built<br/>around <span>your<br className="desktop-break"/> business.</span></h1><p className="hero-description">We design and modernize business websites, build custom applications, and automate everyday workflows.</p><div className="hero-actions"><a className="button" href="#contact">Start a Project <ArrowUpRight size={18}/></a><a className="text-link" href="#work">Explore Our Work <ArrowDown size={16}/></a></div><p className="hero-location"><span/> Based in Southern New Jersey.</p></div><div className="system-visual" role="img" aria-label="Illustration of applications, data, and workflows connected around your business"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><svg className="connections" viewBox="0 0 520 480" fill="none" aria-hidden="true"><path d="M260 240 132 118M260 240l148-78M260 240 120 355M260 240l145 127"/><path className="signal-line" d="M132 118 260 240l145 127"/></svg><div className="system-node node-app"><Braces size={21}/><span>Applications</span><i/></div><div className="system-node node-data"><Database size={21}/><span>Your data</span><i/></div><div className="system-core"><div className="core-symbol"><Layers3 size={37} strokeWidth={1.2}/></div><strong>Your business</strong></div><div className="system-node node-flow"><Workflow size={21}/><span>Workflows</span><i/></div><div className="system-node node-tools"><Layers3 size={21}/><span>Connected tools</span><i/></div></div></div><div className="container hero-bottom"><span>SERVICE AREA</span><span>Manahawkin <i/> Stafford Township <i/> Long Beach Island <i/> surrounding areas</span></div></section>;
+  return (
+    <section id="home" className="hero" aria-labelledby="hero-title">
+      <div className="container hero-grid">
+        <div className="hero-copy">
+          <p className="eyebrow">CUSTOM SOFTWARE STUDIO</p>
+          <h1 id="hero-title">Software built<br />around <span>your<br />business.</span></h1>
+          <p className="hero-description">We design and modernize business websites, build custom applications, and automate everyday workflows.</p>
+          <div className="hero-actions">
+            <a className="button" href="#contact">Start a Project <ArrowUpRight size={17} /></a>
+            <a className="button button-outline" href="#work">View Our Work</a>
+          </div>
+          <p className="hero-location"><span /> Based in Southern New Jersey.</p>
+        </div>
+        <StudioVisual />
+      </div>
+    </section>
+  );
 }
